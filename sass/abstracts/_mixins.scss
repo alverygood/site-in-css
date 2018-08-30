@@ -13,14 +13,40 @@
   transform: translate(-50%, -50%);
 }
 
-//Менеджер медиа запросов
-/*
-0-600px - телефоны
-600-900px - Планшеты портертный режим
-900-1200px - Планшеты горизонтальный режим
-[1200 - 1800] - Нормальный десктопный вариант
-1800px + : - Большие экраны (телевизоры)
-*/
+// Small devices
+@mixin small-screen {
+  @media (min-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+      @content;
+  }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+  @media (min-width: $screen+'px') {
+      @content;
+  }
+}
 
 
 
