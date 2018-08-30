@@ -22,9 +22,6 @@
 1800px + : - Большие экраны (телевизоры)
 */
 
-@mixin respond-phone {
-  @media (max-width: 600px) { @content };
-    
-  }
+
 
 
