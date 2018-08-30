@@ -1,0 +1,30 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin centerSection {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//Менеджер медиа запросов
+/*
+0-600px - телефоны
+600-900px - Планшеты портертный режим
+900-1200px - Планшеты горизонтальный режим
+[1200 - 1800] - Нормальный десктопный вариант
+1800px + : - Большие экраны (телевизоры)
+*/
+
+@mixin respond-phone {
+  @media (max-width: 600px) { @content };
+    
+  }
+
+
