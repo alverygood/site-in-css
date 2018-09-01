@@ -8,6 +8,11 @@
     padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
+
+    @include sm {
+        transform: skewX(0deg);
+        width: 78%;
+    }
     
     &__shape {
         width: 15rem;
@@ -19,15 +24,25 @@
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+
+        @include sm {
+            transform: translateX(-3rem) skewX(0deg);
+        }
 }
     &__image {
         height: 100%;
         transform: translateX(-4rem) scale(1.4);
         backface-visibility: hidden;
+
+        
     }
 
     &__text {
         transform: skewX(12deg);
+
+        @include sm {
+            transform: skewX(0);
+        }
     }
 
     &__caption {
